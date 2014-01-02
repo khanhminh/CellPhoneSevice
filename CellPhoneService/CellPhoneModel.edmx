@@ -1,0 +1,1462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CellPhoneDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CellPhoneDbModelStoreContainer">
+          <EntitySet Name="Application" EntityType="CellPhoneDbModel.Store.Application" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BinhLuan" EntityType="CellPhoneDbModel.Store.BinhLuan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChiTietDonHang" EntityType="CellPhoneDbModel.Store.ChiTietDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChiTietSanPham" EntityType="CellPhoneDbModel.Store.ChiTietSanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DanhGia" EntityType="CellPhoneDbModel.Store.DanhGia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DonDatHang" EntityType="CellPhoneDbModel.Store.DonDatHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GioHang" EntityType="CellPhoneDbModel.Store.GioHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HeDieuHanh" EntityType="CellPhoneDbModel.Store.HeDieuHanh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HinhAnh" EntityType="CellPhoneDbModel.Store.HinhAnh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="KhuyenMai" EntityType="CellPhoneDbModel.Store.KhuyenMai" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LienHe" EntityType="CellPhoneDbModel.Store.LienHe" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoaiSanPham" EntityType="CellPhoneDbModel.Store.LoaiSanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NguoiNhan" EntityType="CellPhoneDbModel.Store.NguoiNhan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NhaSanXuat" EntityType="CellPhoneDbModel.Store.NhaSanXuat" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PhuongThucGiaoHang" EntityType="CellPhoneDbModel.Store.PhuongThucGiaoHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PhuongThucThanhToan" EntityType="CellPhoneDbModel.Store.PhuongThucThanhToan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SanPham" EntityType="CellPhoneDbModel.Store.SanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SoSanhGia" EntityType="CellPhoneDbModel.Store.SoSanhGia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaiKhoan" EntityType="CellPhoneDbModel.Store.TaiKhoan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ThamSo" EntityType="CellPhoneDbModel.Store.ThamSo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TinTuc" EntityType="CellPhoneDbModel.Store.TinTuc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TrangThaiDonDatHang" EntityType="CellPhoneDbModel.Store.TrangThaiDonDatHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Website" EntityType="CellPhoneDbModel.Store.Website" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__BinhLuan__MaSP__4D94879B" Association="CellPhoneDbModel.Store.FK__BinhLuan__MaSP__4D94879B">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="BinhLuan" EntitySet="BinhLuan" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDo__MaDDH__4E88ABD4" Association="CellPhoneDbModel.Store.FK__ChiTietDo__MaDDH__4E88ABD4">
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaSP__4F7CD00D" Association="CellPhoneDbModel.Store.FK__ChiTietDon__MaSP__4F7CD00D">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DanhGia__MaSP__6383C8BA" Association="CellPhoneDbModel.Store.FK__DanhGia__MaSP__6383C8BA">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="DanhGia" EntitySet="DanhGia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DanhGia__NguoiDu__6477ECF3" Association="CellPhoneDbModel.Store.FK__DanhGia__NguoiDu__6477ECF3">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="DanhGia" EntitySet="DanhGia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaNgu__5165187F" Association="CellPhoneDbModel.Store.FK__DonDatHan__MaNgu__5165187F">
+            <End Role="NguoiNhan" EntitySet="NguoiNhan" />
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaPTG__52593CB8" Association="CellPhoneDbModel.Store.FK__DonDatHan__MaPTG__52593CB8">
+            <End Role="PhuongThucGiaoHang" EntitySet="PhuongThucGiaoHang" />
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaPTT__534D60F1" Association="CellPhoneDbModel.Store.FK__DonDatHan__MaPTT__534D60F1">
+            <End Role="PhuongThucThanhToan" EntitySet="PhuongThucThanhToan" />
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHang__MaTK__5441852A" Association="CellPhoneDbModel.Store.FK__DonDatHang__MaTK__5441852A">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaLSP__4AB81AF0" Association="CellPhoneDbModel.Store.FK__SanPham__MaLSP__4AB81AF0">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaNSX__4BAC3F29" Association="CellPhoneDbModel.Store.FK__SanPham__MaNSX__4BAC3F29">
+            <End Role="NhaSanXuat" EntitySet="NhaSanXuat" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SoSanhGia__MaSP__6D0D32F4" Association="CellPhoneDbModel.Store.FK__SoSanhGia__MaSP__6D0D32F4">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="SoSanhGia" EntitySet="SoSanhGia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SoSanhGia__MaWeb__6E01572D" Association="CellPhoneDbModel.Store.FK__SoSanhGia__MaWeb__6E01572D">
+            <End Role="Website" EntitySet="Website" />
+            <End Role="SoSanhGia" EntitySet="SoSanhGia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietSanPham_HeDieuHanh" Association="CellPhoneDbModel.Store.FK_ChiTietSanPham_HeDieuHanh">
+            <End Role="HeDieuHanh" EntitySet="HeDieuHanh" />
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonDatHang_TrangThaiDonDatHang" Association="CellPhoneDbModel.Store.FK_DonDatHang_TrangThaiDonDatHang">
+            <End Role="TrangThaiDonDatHang" EntitySet="TrangThaiDonDatHang" />
+            <End Role="DonDatHang" EntitySet="DonDatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GioHang_SanPham" Association="CellPhoneDbModel.Store.FK_GioHang_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="GioHang" EntitySet="GioHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HinhAnh_ChiTietSanPham" Association="CellPhoneDbModel.Store.FK_HinhAnh_ChiTietSanPham">
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPham" />
+            <End Role="HinhAnh" EntitySet="HinhAnh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_ChiTietSanPham" Association="CellPhoneDbModel.Store.FK_SanPham_ChiTietSanPham">
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPham" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="AppId" />
+          </Key>
+          <Property Name="AppId" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="AppSecret" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Link" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="BinhLuan">
+          <Key>
+            <PropertyRef Name="MaBL" />
+          </Key>
+          <Property Name="MaBL" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Ngay" Type="datetime" Nullable="false" />
+          <Property Name="NoiDung" Type="nvarchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="ChiTietDonHang">
+          <Key>
+            <PropertyRef Name="MaCTDH" />
+          </Key>
+          <Property Name="MaCTDH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="MaDDH" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="Gia" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChiTietSanPham">
+          <Key>
+            <PropertyRef Name="MaChiTiet" />
+          </Key>
+          <Property Name="MaChiTiet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaCTHDH" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="LoaiManHinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoPhanGiai" Type="nvarchar" MaxLength="30" />
+          <Property Name="KichThuocMH" Type="float" />
+          <Property Name="CamUng" Type="nvarchar" MaxLength="50" />
+          <Property Name="CPU" Type="nvarchar" MaxLength="100" />
+          <Property Name="GPU" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DungluongRAM" Type="int" Nullable="false" />
+          <Property Name="DonViRAM" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ROM" Type="int" />
+          <Property Name="BoNhoTrong" Type="int" Nullable="false" />
+          <Property Name="HoTroTheNho" Type="bit" />
+          <Property Name="Camera" Type="nvarchar" MaxLength="50" />
+          <Property Name="_2G" Type="nvarchar" MaxLength="100" />
+          <Property Name="_3G" Type="nvarchar" MaxLength="100" />
+          <Property Name="Wifi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Bluetooth" Type="nvarchar" MaxLength="100" />
+          <Property Name="GPS" Type="nvarchar" MaxLength="50" />
+          <Property Name="KetNoiKhac" Type="nvarchar" MaxLength="100" />
+          <Property Name="BanPhim" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgonNgu" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SoSIM" Type="int" Nullable="false" />
+          <Property Name="GhiAm" Type="bit" />
+          <Property Name="FMRadio" Type="bit" />
+          <Property Name="JackTaiNghe" Type="float" />
+          <Property Name="CamBien" Type="nvarchar" MaxLength="200" />
+          <Property Name="ChucNangKhac" Type="nvarchar" MaxLength="500" />
+          <Property Name="LoaiPin" Type="nvarchar" MaxLength="30" />
+          <Property Name="DungLuongPin" Type="int" />
+          <Property Name="TrongLuong" Type="float" />
+          <Property Name="KichThuoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaoHanh" Type="int" />
+        </EntityType>
+        <EntityType Name="DanhGia">
+          <Key>
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="NguoiDung" />
+          </Key>
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="NguoiDung" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Diem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DonDatHang">
+          <Key>
+            <PropertyRef Name="MaDDH" />
+          </Key>
+          <Property Name="MaDDH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaTK" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaNguoiNhan" Type="int" Nullable="false" />
+          <Property Name="NgayLap" Type="datetime" Nullable="false" />
+          <Property Name="MaPTGH" Type="int" Nullable="false" />
+          <Property Name="MaPTTT" Type="int" Nullable="false" />
+          <Property Name="MaTrangThai" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DonGia" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GioHang">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaGioHang" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="NgayTao" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HeDieuHanh">
+          <Key>
+            <PropertyRef Name="MaHDH" />
+          </Key>
+          <Property Name="MaHDH" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="20" />
+          <Property Name="PhienBan" Type="nvarchar" MaxLength="30" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="HinhAnh">
+          <Key>
+            <PropertyRef Name="MaHA" />
+          </Key>
+          <Property Name="MaHA" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DuongDan" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="STT" Type="int" Nullable="false" />
+          <Property Name="MaCTSP" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KhuyenMai">
+          <Key>
+            <PropertyRef Name="MaKM" />
+          </Key>
+          <Property Name="MaKM" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NoiDung" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+          <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="LienHe">
+          <Key>
+            <PropertyRef Name="MaLH" />
+          </Key>
+          <Property Name="MaLH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NoiDung" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ngay" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+          </Key>
+          <Property Name="MaLoai" Type="int" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="NguoiNhan">
+          <Key>
+            <PropertyRef Name="MaNN" />
+          </Key>
+          <Property Name="MaNN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="DienThoai" Type="nvarchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="NhaSanXuat">
+          <Key>
+            <PropertyRef Name="MaNSX" />
+          </Key>
+          <Property Name="MaNSX" Type="int" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="PhuongThucGiaoHang">
+          <Key>
+            <PropertyRef Name="MaPTGH" />
+          </Key>
+          <Property Name="MaPTGH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PhuongThucThanhToan">
+          <Key>
+            <PropertyRef Name="MaPTTT" />
+          </Key>
+          <Property Name="MaPTTT" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaLSP" Type="int" Nullable="false" />
+          <Property Name="MaNSX" Type="int" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="GiaBanHienHanh" Type="float" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="HinhAnhDaiDien" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="MaCTSP" Type="int" Nullable="false" />
+          <Property Name="NgayNhap" Type="datetime" Nullable="false" />
+          <Property Name="DiemDanhGia" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SoSanhGia">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="MaWebsite" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Gia" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="TenDangNhap" />
+          </Key>
+          <Property Name="TenDangNhap" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HoTen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+          <Property Name="GioiTinh" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DienThoai" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="ThamSo">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NoiDung" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="GiaTri" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="KieuDuLieu" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="TinTuc">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TieuDe" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Link" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Hinh" Type="nvarchar" MaxLength="200" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="500" />
+          <Property Name="Ngay" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrangThaiDonDatHang">
+          <Key>
+            <PropertyRef Name="MaTrangThai" />
+          </Key>
+          <Property Name="MaTrangThai" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="TenTrangThai" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Website">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Link" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LinkTimKiem" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK__BinhLuan__MaSP__4D94879B">
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="1" />
+          <End Role="BinhLuan" Type="CellPhoneDbModel.Store.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDo__MaDDH__4E88ABD4">
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="1" />
+          <End Role="ChiTietDonHang" Type="CellPhoneDbModel.Store.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonDatHang">
+              <PropertyRef Name="MaDDH" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaDDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDon__MaSP__4F7CD00D">
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="1" />
+          <End Role="ChiTietDonHang" Type="CellPhoneDbModel.Store.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DanhGia__MaSP__6383C8BA">
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="1" />
+          <End Role="DanhGia" Type="CellPhoneDbModel.Store.DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DanhGia__NguoiDu__6477ECF3">
+          <End Role="TaiKhoan" Type="CellPhoneDbModel.Store.TaiKhoan" Multiplicity="1" />
+          <End Role="DanhGia" Type="CellPhoneDbModel.Store.DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="NguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaNgu__5165187F">
+          <End Role="NguoiNhan" Type="CellPhoneDbModel.Store.NguoiNhan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiNhan">
+              <PropertyRef Name="MaNN" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaNguoiNhan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaPTG__52593CB8">
+          <End Role="PhuongThucGiaoHang" Type="CellPhoneDbModel.Store.PhuongThucGiaoHang" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhuongThucGiaoHang">
+              <PropertyRef Name="MaPTGH" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaPTGH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaPTT__534D60F1">
+          <End Role="PhuongThucThanhToan" Type="CellPhoneDbModel.Store.PhuongThucThanhToan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhuongThucThanhToan">
+              <PropertyRef Name="MaPTTT" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaPTTT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHang__MaTK__5441852A">
+          <End Role="TaiKhoan" Type="CellPhoneDbModel.Store.TaiKhoan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaLSP__4AB81AF0">
+          <End Role="LoaiSanPham" Type="CellPhoneDbModel.Store.LoaiSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="MaLoai" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaLSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaNSX__4BAC3F29">
+          <End Role="NhaSanXuat" Type="CellPhoneDbModel.Store.NhaSanXuat" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSanXuat">
+              <PropertyRef Name="MaNSX" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaNSX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SoSanhGia__MaSP__6D0D32F4">
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="1" />
+          <End Role="SoSanhGia" Type="CellPhoneDbModel.Store.SoSanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="SoSanhGia">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SoSanhGia__MaWeb__6E01572D">
+          <End Role="Website" Type="CellPhoneDbModel.Store.Website" Multiplicity="1" />
+          <End Role="SoSanhGia" Type="CellPhoneDbModel.Store.SoSanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Website">
+              <PropertyRef Name="MaSo" />
+            </Principal>
+            <Dependent Role="SoSanhGia">
+              <PropertyRef Name="MaWebsite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietSanPham_HeDieuHanh">
+          <End Role="HeDieuHanh" Type="CellPhoneDbModel.Store.HeDieuHanh" Multiplicity="1" />
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.Store.ChiTietSanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HeDieuHanh">
+              <PropertyRef Name="MaHDH" />
+            </Principal>
+            <Dependent Role="ChiTietSanPham">
+              <PropertyRef Name="MaCTHDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonDatHang_TrangThaiDonDatHang">
+          <End Role="TrangThaiDonDatHang" Type="CellPhoneDbModel.Store.TrangThaiDonDatHang" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.Store.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrangThaiDonDatHang">
+              <PropertyRef Name="MaTrangThai" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaTrangThai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GioHang_SanPham">
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="1" />
+          <End Role="GioHang" Type="CellPhoneDbModel.Store.GioHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="GioHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HinhAnh_ChiTietSanPham">
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.Store.ChiTietSanPham" Multiplicity="1" />
+          <End Role="HinhAnh" Type="CellPhoneDbModel.Store.HinhAnh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietSanPham">
+              <PropertyRef Name="MaChiTiet" />
+            </Principal>
+            <Dependent Role="HinhAnh">
+              <PropertyRef Name="MaCTSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_ChiTietSanPham">
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.Store.ChiTietSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.Store.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietSanPham">
+              <PropertyRef Name="MaChiTiet" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaCTSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CellPhoneDbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CellPhoneDbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="BinhLuans" EntityType="CellPhoneDbModel.BinhLuan" />
+          <EntitySet Name="ChiTietDonHangs" EntityType="CellPhoneDbModel.ChiTietDonHang" />
+          <EntitySet Name="ChiTietSanPhams" EntityType="CellPhoneDbModel.ChiTietSanPham" />
+          <EntitySet Name="DonDatHangs" EntityType="CellPhoneDbModel.DonDatHang" />
+          <EntitySet Name="GioHangs" EntityType="CellPhoneDbModel.GioHang" />
+          <EntitySet Name="HeDieuHanhs" EntityType="CellPhoneDbModel.HeDieuHanh" />
+          <EntitySet Name="HinhAnhs" EntityType="CellPhoneDbModel.HinhAnh" />
+          <EntitySet Name="KhuyenMais" EntityType="CellPhoneDbModel.KhuyenMai" />
+          <EntitySet Name="LienHes" EntityType="CellPhoneDbModel.LienHe" />
+          <EntitySet Name="LoaiSanPhams" EntityType="CellPhoneDbModel.LoaiSanPham" />
+          <EntitySet Name="NguoiNhans" EntityType="CellPhoneDbModel.NguoiNhan" />
+          <EntitySet Name="NhaSanXuats" EntityType="CellPhoneDbModel.NhaSanXuat" />
+          <EntitySet Name="PhuongThucGiaoHangs" EntityType="CellPhoneDbModel.PhuongThucGiaoHang" />
+          <EntitySet Name="PhuongThucThanhToans" EntityType="CellPhoneDbModel.PhuongThucThanhToan" />
+          <EntitySet Name="SanPhams" EntityType="CellPhoneDbModel.SanPham" />
+          <EntitySet Name="TaiKhoans" EntityType="CellPhoneDbModel.TaiKhoan" />
+          <EntitySet Name="ThamSoes" EntityType="CellPhoneDbModel.ThamSo" />
+          <EntitySet Name="TrangThaiDonDatHangs" EntityType="CellPhoneDbModel.TrangThaiDonDatHang" />
+          <AssociationSet Name="FK__BinhLuan__MaSP__4D94879B" Association="CellPhoneDbModel.FK__BinhLuan__MaSP__4D94879B">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="BinhLuan" EntitySet="BinhLuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDo__MaDDH__4E88ABD4" Association="CellPhoneDbModel.FK__ChiTietDo__MaDDH__4E88ABD4">
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaSP__4F7CD00D" Association="CellPhoneDbModel.FK__ChiTietDon__MaSP__4F7CD00D">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietSanPham_HeDieuHanh" Association="CellPhoneDbModel.FK_ChiTietSanPham_HeDieuHanh">
+            <End Role="HeDieuHanh" EntitySet="HeDieuHanhs" />
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HinhAnh_ChiTietSanPham" Association="CellPhoneDbModel.FK_HinhAnh_ChiTietSanPham">
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPhams" />
+            <End Role="HinhAnh" EntitySet="HinhAnhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_ChiTietSanPham" Association="CellPhoneDbModel.FK_SanPham_ChiTietSanPham">
+            <End Role="ChiTietSanPham" EntitySet="ChiTietSanPhams" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaNgu__5165187F" Association="CellPhoneDbModel.FK__DonDatHan__MaNgu__5165187F">
+            <End Role="NguoiNhan" EntitySet="NguoiNhans" />
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaPTG__52593CB8" Association="CellPhoneDbModel.FK__DonDatHan__MaPTG__52593CB8">
+            <End Role="PhuongThucGiaoHang" EntitySet="PhuongThucGiaoHangs" />
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHan__MaPTT__534D60F1" Association="CellPhoneDbModel.FK__DonDatHan__MaPTT__534D60F1">
+            <End Role="PhuongThucThanhToan" EntitySet="PhuongThucThanhToans" />
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonDatHang__MaTK__5441852A" Association="CellPhoneDbModel.FK__DonDatHang__MaTK__5441852A">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonDatHang_TrangThaiDonDatHang" Association="CellPhoneDbModel.FK_DonDatHang_TrangThaiDonDatHang">
+            <End Role="TrangThaiDonDatHang" EntitySet="TrangThaiDonDatHangs" />
+            <End Role="DonDatHang" EntitySet="DonDatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GioHang_SanPham" Association="CellPhoneDbModel.FK_GioHang_SanPham">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="GioHang" EntitySet="GioHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaLSP__4AB81AF0" Association="CellPhoneDbModel.FK__SanPham__MaLSP__4AB81AF0">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaNSX__4BAC3F29" Association="CellPhoneDbModel.FK__SanPham__MaNSX__4BAC3F29">
+            <End Role="NhaSanXuat" EntitySet="NhaSanXuats" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <EntitySet Name="DanhGias" EntityType="CellPhoneDbModel.DanhGia" />
+          <AssociationSet Name="FK__DanhGia__MaSP__6383C8BA" Association="CellPhoneDbModel.FK__DanhGia__MaSP__6383C8BA">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="DanhGia" EntitySet="DanhGias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DanhGia__NguoiDu__6477ECF3" Association="CellPhoneDbModel.FK__DanhGia__NguoiDu__6477ECF3">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="DanhGia" EntitySet="DanhGias" />
+          </AssociationSet>
+          <EntitySet Name="SoSanhGias" EntityType="CellPhoneDbModel.SoSanhGia" />
+          <EntitySet Name="Websites" EntityType="CellPhoneDbModel.Website" />
+          <AssociationSet Name="FK__SoSanhGia__MaSP__6D0D32F4" Association="CellPhoneDbModel.FK__SoSanhGia__MaSP__6D0D32F4">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="SoSanhGia" EntitySet="SoSanhGias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SoSanhGia__MaWeb__6E01572D" Association="CellPhoneDbModel.FK__SoSanhGia__MaWeb__6E01572D">
+            <End Role="Website" EntitySet="Websites" />
+            <End Role="SoSanhGia" EntitySet="SoSanhGias" />
+          </AssociationSet>
+          <EntitySet Name="TinTucs" EntityType="CellPhoneDbModel.TinTuc" />
+          <EntitySet Name="Applications" EntityType="CellPhoneDbModel.Application" />
+        </EntityContainer>
+        <EntityType Name="BinhLuan">
+          <Key>
+            <PropertyRef Name="MaBL" />
+          </Key>
+          <Property Name="MaBL" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="Int32" Nullable="false" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SanPham" Relationship="CellPhoneDbModel.FK__BinhLuan__MaSP__4D94879B" FromRole="BinhLuan" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="ChiTietDonHang">
+          <Key>
+            <PropertyRef Name="MaCTDH" />
+          </Key>
+          <Property Name="MaCTDH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="Int32" Nullable="false" />
+          <Property Name="MaDDH" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="Gia" Type="Double" Nullable="false" />
+          <NavigationProperty Name="DonDatHang" Relationship="CellPhoneDbModel.FK__ChiTietDo__MaDDH__4E88ABD4" FromRole="ChiTietDonHang" ToRole="DonDatHang" />
+          <NavigationProperty Name="SanPham" Relationship="CellPhoneDbModel.FK__ChiTietDon__MaSP__4F7CD00D" FromRole="ChiTietDonHang" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="ChiTietSanPham">
+          <Key>
+            <PropertyRef Name="MaChiTiet" />
+          </Key>
+          <Property Name="MaChiTiet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaCTHDH" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="LoaiManHinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DoPhanGiai" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="KichThuocMH" Type="Double" />
+          <Property Name="CamUng" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CPU" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="GPU" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DungluongRAM" Type="Int32" Nullable="false" />
+          <Property Name="DonViRAM" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ROM" Type="Int32" />
+          <Property Name="BoNhoTrong" Type="Int32" Nullable="false" />
+          <Property Name="HoTroTheNho" Type="Boolean" />
+          <Property Name="Camera" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="C_2G" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="C_3G" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Wifi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Bluetooth" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="GPS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KetNoiKhac" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="BanPhim" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="NgonNgu" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SoSIM" Type="Int32" Nullable="false" />
+          <Property Name="GhiAm" Type="Boolean" />
+          <Property Name="FMRadio" Type="Boolean" />
+          <Property Name="JackTaiNghe" Type="Double" />
+          <Property Name="CamBien" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ChucNangKhac" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="LoaiPin" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="DungLuongPin" Type="Int32" />
+          <Property Name="TrongLuong" Type="Double" />
+          <Property Name="KichThuoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BaoHanh" Type="Int32" />
+          <NavigationProperty Name="HeDieuHanh" Relationship="CellPhoneDbModel.FK_ChiTietSanPham_HeDieuHanh" FromRole="ChiTietSanPham" ToRole="HeDieuHanh" />
+          <NavigationProperty Name="HinhAnhs" Relationship="CellPhoneDbModel.FK_HinhAnh_ChiTietSanPham" FromRole="ChiTietSanPham" ToRole="HinhAnh" />
+          <NavigationProperty Name="SanPhams" Relationship="CellPhoneDbModel.FK_SanPham_ChiTietSanPham" FromRole="ChiTietSanPham" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="DonDatHang">
+          <Key>
+            <PropertyRef Name="MaDDH" />
+          </Key>
+          <Property Name="MaDDH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaTK" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaNguoiNhan" Type="Int32" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MaPTGH" Type="Int32" Nullable="false" />
+          <Property Name="MaPTTT" Type="Int32" Nullable="false" />
+          <Property Name="MaTrangThai" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="DonGia" Type="Double" Nullable="false" />
+          <NavigationProperty Name="ChiTietDonHangs" Relationship="CellPhoneDbModel.FK__ChiTietDo__MaDDH__4E88ABD4" FromRole="DonDatHang" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="NguoiNhan" Relationship="CellPhoneDbModel.FK__DonDatHan__MaNgu__5165187F" FromRole="DonDatHang" ToRole="NguoiNhan" />
+          <NavigationProperty Name="PhuongThucGiaoHang" Relationship="CellPhoneDbModel.FK__DonDatHan__MaPTG__52593CB8" FromRole="DonDatHang" ToRole="PhuongThucGiaoHang" />
+          <NavigationProperty Name="PhuongThucThanhToan" Relationship="CellPhoneDbModel.FK__DonDatHan__MaPTT__534D60F1" FromRole="DonDatHang" ToRole="PhuongThucThanhToan" />
+          <NavigationProperty Name="TaiKhoan" Relationship="CellPhoneDbModel.FK__DonDatHang__MaTK__5441852A" FromRole="DonDatHang" ToRole="TaiKhoan" />
+          <NavigationProperty Name="TrangThaiDonDatHang" Relationship="CellPhoneDbModel.FK_DonDatHang_TrangThaiDonDatHang" FromRole="DonDatHang" ToRole="TrangThaiDonDatHang" />
+        </EntityType>
+        <EntityType Name="GioHang">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaGioHang" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaSP" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SanPham" Relationship="CellPhoneDbModel.FK_GioHang_SanPham" FromRole="GioHang" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="HeDieuHanh">
+          <Key>
+            <PropertyRef Name="MaHDH" />
+          </Key>
+          <Property Name="MaHDH" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Ten" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PhienBan" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Logo" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ChiTietSanPhams" Relationship="CellPhoneDbModel.FK_ChiTietSanPham_HeDieuHanh" FromRole="HeDieuHanh" ToRole="ChiTietSanPham" />
+        </EntityType>
+        <EntityType Name="HinhAnh">
+          <Key>
+            <PropertyRef Name="MaHA" />
+          </Key>
+          <Property Name="MaHA" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DuongDan" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="STT" Type="Int32" Nullable="false" />
+          <Property Name="MaCTSP" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ChiTietSanPham" Relationship="CellPhoneDbModel.FK_HinhAnh_ChiTietSanPham" FromRole="HinhAnh" ToRole="ChiTietSanPham" />
+        </EntityType>
+        <EntityType Name="KhuyenMai">
+          <Key>
+            <PropertyRef Name="MaKM" />
+          </Key>
+          <Property Name="MaKM" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HinhAnh" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LienHe">
+          <Key>
+            <PropertyRef Name="MaLH" />
+          </Key>
+          <Property Name="MaLH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+          </Key>
+          <Property Name="MaLoai" Type="Int32" Nullable="false" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SanPhams" Relationship="CellPhoneDbModel.FK__SanPham__MaLSP__4AB81AF0" FromRole="LoaiSanPham" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="NguoiNhan">
+          <Key>
+            <PropertyRef Name="MaNN" />
+          </Key>
+          <Property Name="MaNN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DonDatHangs" Relationship="CellPhoneDbModel.FK__DonDatHan__MaNgu__5165187F" FromRole="NguoiNhan" ToRole="DonDatHang" />
+        </EntityType>
+        <EntityType Name="NhaSanXuat">
+          <Key>
+            <PropertyRef Name="MaNSX" />
+          </Key>
+          <Property Name="MaNSX" Type="Int32" Nullable="false" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Logo" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SanPhams" Relationship="CellPhoneDbModel.FK__SanPham__MaNSX__4BAC3F29" FromRole="NhaSanXuat" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="PhuongThucGiaoHang">
+          <Key>
+            <PropertyRef Name="MaPTGH" />
+          </Key>
+          <Property Name="MaPTGH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DonDatHangs" Relationship="CellPhoneDbModel.FK__DonDatHan__MaPTG__52593CB8" FromRole="PhuongThucGiaoHang" ToRole="DonDatHang" />
+        </EntityType>
+        <EntityType Name="PhuongThucThanhToan">
+          <Key>
+            <PropertyRef Name="MaPTTT" />
+          </Key>
+          <Property Name="MaPTTT" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DonDatHangs" Relationship="CellPhoneDbModel.FK__DonDatHan__MaPTT__534D60F1" FromRole="PhuongThucThanhToan" ToRole="DonDatHang" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLSP" Type="Int32" Nullable="false" />
+          <Property Name="MaNSX" Type="Int32" Nullable="false" />
+          <Property Name="TenSP" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="GiaBanHienHanh" Type="Double" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="HinhAnhDaiDien" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MaCTSP" Type="Int32" Nullable="false" />
+          <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DiemDanhGia" Type="Double" Nullable="false" />
+          <NavigationProperty Name="BinhLuans" Relationship="CellPhoneDbModel.FK__BinhLuan__MaSP__4D94879B" FromRole="SanPham" ToRole="BinhLuan" />
+          <NavigationProperty Name="ChiTietDonHangs" Relationship="CellPhoneDbModel.FK__ChiTietDon__MaSP__4F7CD00D" FromRole="SanPham" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="ChiTietSanPham" Relationship="CellPhoneDbModel.FK_SanPham_ChiTietSanPham" FromRole="SanPham" ToRole="ChiTietSanPham" />
+          <NavigationProperty Name="GioHangs" Relationship="CellPhoneDbModel.FK_GioHang_SanPham" FromRole="SanPham" ToRole="GioHang" />
+          <NavigationProperty Name="LoaiSanPham" Relationship="CellPhoneDbModel.FK__SanPham__MaLSP__4AB81AF0" FromRole="SanPham" ToRole="LoaiSanPham" />
+          <NavigationProperty Name="NhaSanXuat" Relationship="CellPhoneDbModel.FK__SanPham__MaNSX__4BAC3F29" FromRole="SanPham" ToRole="NhaSanXuat" />
+          <NavigationProperty Name="DanhGias" Relationship="CellPhoneDbModel.FK__DanhGia__MaSP__6383C8BA" FromRole="SanPham" ToRole="DanhGia" />
+          <NavigationProperty Name="SoSanhGias" Relationship="CellPhoneDbModel.FK__SoSanhGia__MaSP__6D0D32F4" FromRole="SanPham" ToRole="SoSanhGia" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="TenDangNhap" />
+          </Key>
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GioiTinh" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DonDatHangs" Relationship="CellPhoneDbModel.FK__DonDatHang__MaTK__5441852A" FromRole="TaiKhoan" ToRole="DonDatHang" />
+          <NavigationProperty Name="DanhGias" Relationship="CellPhoneDbModel.FK__DanhGia__NguoiDu__6477ECF3" FromRole="TaiKhoan" ToRole="DanhGia" />
+        </EntityType>
+        <EntityType Name="ThamSo">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Name="MaSo" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GiaTri" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KieuDuLieu" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TrangThaiDonDatHang">
+          <Key>
+            <PropertyRef Name="MaTrangThai" />
+          </Key>
+          <Property Name="MaTrangThai" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="TenTrangThai" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DonDatHangs" Relationship="CellPhoneDbModel.FK_DonDatHang_TrangThaiDonDatHang" FromRole="TrangThaiDonDatHang" ToRole="DonDatHang" />
+        </EntityType>
+        <Association Name="FK__BinhLuan__MaSP__4D94879B">
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="1" />
+          <End Role="BinhLuan" Type="CellPhoneDbModel.BinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="BinhLuan">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDo__MaDDH__4E88ABD4">
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="1" />
+          <End Role="ChiTietDonHang" Type="CellPhoneDbModel.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonDatHang">
+              <PropertyRef Name="MaDDH" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaDDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDon__MaSP__4F7CD00D">
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="1" />
+          <End Role="ChiTietDonHang" Type="CellPhoneDbModel.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietSanPham_HeDieuHanh">
+          <End Role="HeDieuHanh" Type="CellPhoneDbModel.HeDieuHanh" Multiplicity="1" />
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.ChiTietSanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HeDieuHanh">
+              <PropertyRef Name="MaHDH" />
+            </Principal>
+            <Dependent Role="ChiTietSanPham">
+              <PropertyRef Name="MaCTHDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HinhAnh_ChiTietSanPham">
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.ChiTietSanPham" Multiplicity="1" />
+          <End Role="HinhAnh" Type="CellPhoneDbModel.HinhAnh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietSanPham">
+              <PropertyRef Name="MaChiTiet" />
+            </Principal>
+            <Dependent Role="HinhAnh">
+              <PropertyRef Name="MaCTSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_ChiTietSanPham">
+          <End Role="ChiTietSanPham" Type="CellPhoneDbModel.ChiTietSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietSanPham">
+              <PropertyRef Name="MaChiTiet" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaCTSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaNgu__5165187F">
+          <End Role="NguoiNhan" Type="CellPhoneDbModel.NguoiNhan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NguoiNhan">
+              <PropertyRef Name="MaNN" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaNguoiNhan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaPTG__52593CB8">
+          <End Role="PhuongThucGiaoHang" Type="CellPhoneDbModel.PhuongThucGiaoHang" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhuongThucGiaoHang">
+              <PropertyRef Name="MaPTGH" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaPTGH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHan__MaPTT__534D60F1">
+          <End Role="PhuongThucThanhToan" Type="CellPhoneDbModel.PhuongThucThanhToan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhuongThucThanhToan">
+              <PropertyRef Name="MaPTTT" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaPTTT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonDatHang__MaTK__5441852A">
+          <End Role="TaiKhoan" Type="CellPhoneDbModel.TaiKhoan" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonDatHang_TrangThaiDonDatHang">
+          <End Role="TrangThaiDonDatHang" Type="CellPhoneDbModel.TrangThaiDonDatHang" Multiplicity="1" />
+          <End Role="DonDatHang" Type="CellPhoneDbModel.DonDatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrangThaiDonDatHang">
+              <PropertyRef Name="MaTrangThai" />
+            </Principal>
+            <Dependent Role="DonDatHang">
+              <PropertyRef Name="MaTrangThai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GioHang_SanPham">
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="1" />
+          <End Role="GioHang" Type="CellPhoneDbModel.GioHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="GioHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaLSP__4AB81AF0">
+          <End Role="LoaiSanPham" Type="CellPhoneDbModel.LoaiSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="MaLoai" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaLSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaNSX__4BAC3F29">
+          <End Role="NhaSanXuat" Type="CellPhoneDbModel.NhaSanXuat" Multiplicity="1" />
+          <End Role="SanPham" Type="CellPhoneDbModel.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSanXuat">
+              <PropertyRef Name="MaNSX" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaNSX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DanhGia">
+          <Key>
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="NguoiDung" />
+          </Key>
+          <Property Type="Int32" Name="MaSP" Nullable="false" />
+          <Property Type="String" Name="NguoiDung" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Diem" Nullable="false" />
+          <NavigationProperty Name="SanPham" Relationship="CellPhoneDbModel.FK__DanhGia__MaSP__6383C8BA" FromRole="DanhGia" ToRole="SanPham" />
+          <NavigationProperty Name="TaiKhoan" Relationship="CellPhoneDbModel.FK__DanhGia__NguoiDu__6477ECF3" FromRole="DanhGia" ToRole="TaiKhoan" />
+        </EntityType>
+        <Association Name="FK__DanhGia__MaSP__6383C8BA">
+          <End Type="CellPhoneDbModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="CellPhoneDbModel.DanhGia" Role="DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DanhGia__NguoiDu__6477ECF3">
+          <End Type="CellPhoneDbModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="CellPhoneDbModel.DanhGia" Role="DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="NguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SoSanhGia">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Type="Int32" Name="MaSo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MaSP" Nullable="false" />
+          <Property Type="String" Name="MaWebsite" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gia" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPham" Relationship="CellPhoneDbModel.FK__SoSanhGia__MaSP__6D0D32F4" FromRole="SoSanhGia" ToRole="SanPham" />
+          <NavigationProperty Name="Website" Relationship="CellPhoneDbModel.FK__SoSanhGia__MaWeb__6E01572D" FromRole="SoSanhGia" ToRole="Website" />
+        </EntityType>
+        <EntityType Name="Website">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Type="String" Name="MaSo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Ten" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Link" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkTimKiem" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SoSanhGias" Relationship="CellPhoneDbModel.FK__SoSanhGia__MaWeb__6E01572D" FromRole="Website" ToRole="SoSanhGia" />
+        </EntityType>
+        <Association Name="FK__SoSanhGia__MaSP__6D0D32F4">
+          <End Type="CellPhoneDbModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="CellPhoneDbModel.SoSanhGia" Role="SoSanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="SoSanhGia">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SoSanhGia__MaWeb__6E01572D">
+          <End Type="CellPhoneDbModel.Website" Role="Website" Multiplicity="1" />
+          <End Type="CellPhoneDbModel.SoSanhGia" Role="SoSanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Website">
+              <PropertyRef Name="MaSo" />
+            </Principal>
+            <Dependent Role="SoSanhGia">
+              <PropertyRef Name="MaWebsite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TinTuc">
+          <Key>
+            <PropertyRef Name="MaSo" />
+          </Key>
+          <Property Type="Int32" Name="MaSo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TieuDe" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Link" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Hinh" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MoTa" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Ngay" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="AppId" />
+          </Key>
+          <Property Type="String" Name="AppId" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AppSecret" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Link" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CellPhoneDbModelStoreContainer" CdmEntityContainer="CellPhoneDbEntities">
+          <EntitySetMapping Name="BinhLuans">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.BinhLuan">
+              <MappingFragment StoreEntitySet="BinhLuan">
+                <ScalarProperty Name="MaBL" ColumnName="MaBL" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietDonHangs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.ChiTietDonHang">
+              <MappingFragment StoreEntitySet="ChiTietDonHang">
+                <ScalarProperty Name="MaCTDH" ColumnName="MaCTDH" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="MaDDH" ColumnName="MaDDH" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietSanPhams">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.ChiTietSanPham">
+              <MappingFragment StoreEntitySet="ChiTietSanPham">
+                <ScalarProperty Name="MaChiTiet" ColumnName="MaChiTiet" />
+                <ScalarProperty Name="MaCTHDH" ColumnName="MaCTHDH" />
+                <ScalarProperty Name="LoaiManHinh" ColumnName="LoaiManHinh" />
+                <ScalarProperty Name="DoPhanGiai" ColumnName="DoPhanGiai" />
+                <ScalarProperty Name="KichThuocMH" ColumnName="KichThuocMH" />
+                <ScalarProperty Name="CamUng" ColumnName="CamUng" />
+                <ScalarProperty Name="CPU" ColumnName="CPU" />
+                <ScalarProperty Name="GPU" ColumnName="GPU" />
+                <ScalarProperty Name="DungluongRAM" ColumnName="DungluongRAM" />
+                <ScalarProperty Name="DonViRAM" ColumnName="DonViRAM" />
+                <ScalarProperty Name="ROM" ColumnName="ROM" />
+                <ScalarProperty Name="BoNhoTrong" ColumnName="BoNhoTrong" />
+                <ScalarProperty Name="HoTroTheNho" ColumnName="HoTroTheNho" />
+                <ScalarProperty Name="Camera" ColumnName="Camera" />
+                <ScalarProperty Name="C_2G" ColumnName="_2G" />
+                <ScalarProperty Name="C_3G" ColumnName="_3G" />
+                <ScalarProperty Name="Wifi" ColumnName="Wifi" />
+                <ScalarProperty Name="Bluetooth" ColumnName="Bluetooth" />
+                <ScalarProperty Name="GPS" ColumnName="GPS" />
+                <ScalarProperty Name="KetNoiKhac" ColumnName="KetNoiKhac" />
+                <ScalarProperty Name="BanPhim" ColumnName="BanPhim" />
+                <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
+                <ScalarProperty Name="SoSIM" ColumnName="SoSIM" />
+                <ScalarProperty Name="GhiAm" ColumnName="GhiAm" />
+                <ScalarProperty Name="FMRadio" ColumnName="FMRadio" />
+                <ScalarProperty Name="JackTaiNghe" ColumnName="JackTaiNghe" />
+                <ScalarProperty Name="CamBien" ColumnName="CamBien" />
+                <ScalarProperty Name="ChucNangKhac" ColumnName="ChucNangKhac" />
+                <ScalarProperty Name="LoaiPin" ColumnName="LoaiPin" />
+                <ScalarProperty Name="DungLuongPin" ColumnName="DungLuongPin" />
+                <ScalarProperty Name="TrongLuong" ColumnName="TrongLuong" />
+                <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
+                <ScalarProperty Name="BaoHanh" ColumnName="BaoHanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DonDatHangs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.DonDatHang">
+              <MappingFragment StoreEntitySet="DonDatHang">
+                <ScalarProperty Name="MaDDH" ColumnName="MaDDH" />
+                <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+                <ScalarProperty Name="MaNguoiNhan" ColumnName="MaNguoiNhan" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="MaPTGH" ColumnName="MaPTGH" />
+                <ScalarProperty Name="MaPTTT" ColumnName="MaPTTT" />
+                <ScalarProperty Name="MaTrangThai" ColumnName="MaTrangThai" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GioHangs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.GioHang">
+              <MappingFragment StoreEntitySet="GioHang">
+                <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+                <ScalarProperty Name="MaGioHang" ColumnName="MaGioHang" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HeDieuHanhs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.HeDieuHanh">
+              <MappingFragment StoreEntitySet="HeDieuHanh">
+                <ScalarProperty Name="MaHDH" ColumnName="MaHDH" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="PhienBan" ColumnName="PhienBan" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HinhAnhs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.HinhAnh">
+              <MappingFragment StoreEntitySet="HinhAnh">
+                <ScalarProperty Name="MaHA" ColumnName="MaHA" />
+                <ScalarProperty Name="DuongDan" ColumnName="DuongDan" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhuyenMais">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.KhuyenMai">
+              <MappingFragment StoreEntitySet="KhuyenMai">
+                <ScalarProperty Name="MaKM" ColumnName="MaKM" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LienHes">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.LienHe">
+              <MappingFragment StoreEntitySet="LienHe">
+                <ScalarProperty Name="MaLH" ColumnName="MaLH" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiSanPhams">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.LoaiSanPham">
+              <MappingFragment StoreEntitySet="LoaiSanPham">
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NguoiNhans">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.NguoiNhan">
+              <MappingFragment StoreEntitySet="NguoiNhan">
+                <ScalarProperty Name="MaNN" ColumnName="MaNN" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhaSanXuats">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.NhaSanXuat">
+              <MappingFragment StoreEntitySet="NhaSanXuat">
+                <ScalarProperty Name="MaNSX" ColumnName="MaNSX" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhuongThucGiaoHangs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.PhuongThucGiaoHang">
+              <MappingFragment StoreEntitySet="PhuongThucGiaoHang">
+                <ScalarProperty Name="MaPTGH" ColumnName="MaPTGH" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhuongThucThanhToans">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.PhuongThucThanhToan">
+              <MappingFragment StoreEntitySet="PhuongThucThanhToan">
+                <ScalarProperty Name="MaPTTT" ColumnName="MaPTTT" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhams">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="MaLSP" ColumnName="MaLSP" />
+                <ScalarProperty Name="MaNSX" ColumnName="MaNSX" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="GiaBanHienHanh" ColumnName="GiaBanHienHanh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="HinhAnhDaiDien" ColumnName="HinhAnhDaiDien" />
+                <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThamSoes">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.ThamSo">
+              <MappingFragment StoreEntitySet="ThamSo">
+                <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+                <ScalarProperty Name="KieuDuLieu" ColumnName="KieuDuLieu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrangThaiDonDatHangs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.TrangThaiDonDatHang">
+              <MappingFragment StoreEntitySet="TrangThaiDonDatHang">
+                <ScalarProperty Name="MaTrangThai" ColumnName="MaTrangThai" />
+                <ScalarProperty Name="TenTrangThai" ColumnName="TenTrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhGias">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.DanhGia">
+              <MappingFragment StoreEntitySet="DanhGia">
+                <ScalarProperty Name="Diem" ColumnName="Diem" />
+                <ScalarProperty Name="NguoiDung" ColumnName="NguoiDung" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SoSanhGias">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.SoSanhGia">
+              <MappingFragment StoreEntitySet="SoSanhGia">
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="MaWebsite" ColumnName="MaWebsite" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Websites">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.Website">
+              <MappingFragment StoreEntitySet="Website">
+                <ScalarProperty Name="LinkTimKiem" ColumnName="LinkTimKiem" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinTucs">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.TinTuc">
+              <MappingFragment StoreEntitySet="TinTuc">
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="CellPhoneDbModel.Application">
+              <MappingFragment StoreEntitySet="Application">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="AppSecret" ColumnName="AppSecret" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

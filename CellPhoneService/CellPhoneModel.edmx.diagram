@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8d356186fc8f4c6c8b711636ef1d7e5f" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="CellPhoneDbModel.BinhLuan" Width="1.5" PointX="10.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.ChiTietDonHang" Width="1.5" PointX="13.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.ChiTietSanPham" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.DonDatHang" Width="1.5" PointX="11.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.GioHang" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.HeDieuHanh" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.HinhAnh" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.KhuyenMai" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.LienHe" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.LoaiSanPham" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.NguoiNhan" Width="1.5" PointX="9" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.NhaSanXuat" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.PhuongThucGiaoHang" Width="1.5" PointX="9" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.PhuongThucThanhToan" Width="1.5" PointX="9" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.SanPham" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.TaiKhoan" Width="1.5" PointX="9" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.ThamSo" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.TrangThaiDonDatHang" Width="1.5" PointX="9" PointY="24" IsExpanded="true" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__BinhLuan__MaSP__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__ChiTietDo__MaDDH__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__ChiTietDon__MaSP__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK_ChiTietSanPham_HeDieuHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK_HinhAnh_ChiTietSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK_SanPham_ChiTietSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DonDatHan__MaNgu__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DonDatHan__MaPTG__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DonDatHan__MaPTT__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DonDatHang__MaTK__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK_DonDatHang_TrangThaiDonDatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK_GioHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__SanPham__MaLSP__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__SanPham__MaNSX__4BAC3F29" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.DanhGia" Width="1.5" PointX="0.43401420881692976" PointY="20.692331800559689" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DanhGia__MaSP__6383C8BA" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__DanhGia__NguoiDu__6477ECF3" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.SoSanhGia" Width="1.5" PointX="11.656494637791298" PointY="26.059465629076335" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.Website" Width="1.5" PointX="5.4692317086594322" PointY="31.028677194858286" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__SoSanhGia__MaSP__6D0D32F4" />
+        <AssociationConnector Association="CellPhoneDbModel.FK__SoSanhGia__MaWeb__6E01572D" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.TinTuc" Width="1.5" PointX="7.8790261335107612" PointY="29.931450336208311" />
+        <EntityTypeShape EntityType="CellPhoneDbModel.Application" Width="1.5" PointX="1.1806889014228661" PointY="11.921954205223338" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

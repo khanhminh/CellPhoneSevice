@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A234171B-E5CF-43CB-BEDA-C2747883A86E}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CellPhoneService</RootNamespace>
+    <AssemblyName>CellPhoneService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\..\..\..\Web\skydrive-2014-01-01\WebApiOAuthSecurity\packages\DotNetOpenAuth.Ultimate.4.0.1.12097\lib\net40-full\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.4.0.0\lib\net40\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BinhLuan.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CellPhoneModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CellPhoneModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CellPhoneModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CellPhoneModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CellPhoneModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietDonHang.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietSanPham.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BrandController.cs" />
+    <Compile Include="Controllers\DeliveryModeController.cs" />
+    <Compile Include="Controllers\MembershipController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FilterController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewProductController.cs" />
+    <Compile Include="Controllers\NewsCollectingController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OSController.cs" />
+    <Compile Include="Controllers\PaymentModeController.cs" />
+    <Compile Include="Controllers\PriceCollectingController.cs" />
+    <Compile Include="Controllers\PriceCompareController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RatingController.cs" />
+    <Compile Include="Controllers\RelativeProductController.cs" />
+    <Compile Include="Controllers\TokenIssuerController.cs" />
+    <Compile Include="DanhGia.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\ApplicationDAO.cs" />
+    <Compile Include="DAO\BrandDAO.cs" />
+    <Compile Include="DAO\CommentDAO.cs" />
+    <Compile Include="DAO\ContactDAO.cs" />
+    <Compile Include="DAO\DataDAO.cs" />
+    <Compile Include="DAO\NewsDAO.cs" />
+    <Compile Include="DAO\OrderDAO.cs" />
+    <Compile Include="DAO\OsDAO.cs" />
+    <Compile Include="DAO\PriceCompareDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\RatingDAO.cs" />
+    <Compile Include="DAO\WebsiteDAO.cs" />
+    <Compile Include="DonDatHang.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HeDieuHanh.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HinhAnh.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LienHe.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiSanPham.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DetailProductModel.cs" />
+    <Compile Include="Models\FilterModel.cs" />
+    <Compile Include="Models\ListCommentModel.cs" />
+    <Compile Include="Models\ListOrderModel.cs" />
+    <Compile Include="Models\ListProductModel.cs" />
+    <Compile Include="Models\NewProduct.cs" />
+    <Compile Include="Models\RatingModel.cs" />
+    <Compile Include="Models\TaiKhoan.cs" />
+    <Compile Include="NguoiNhan.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaSanXuat.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Oauth2\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Oauth2\IssuerConfiguration.cs" />
+    <Compile Include="Oauth2\OAuth2Issuer.cs" />
+    <Compile Include="Oauth2\OauthAuthorize.cs" />
+    <Compile Include="Oauth2\ResourceServerConfiguration.cs" />
+    <Compile Include="PhuongThucGiaoHang.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhuongThucThanhToan.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service\NewsCollecting.cs" />
+    <Compile Include="Service\PriceCollecting.cs" />
+    <Compile Include="SoSanhGia.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs" />
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThamSo.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TinTuc.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrangThaiDonDatHang.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Website.cs">
+      <DependentUpon>CellPhoneModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="CellPhoneModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CellPhoneModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="CellPhoneModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CellPhoneModel.edmx</DependentUpon>
+      <LastGenOutput>CellPhoneModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CellPhoneModel.edmx.diagram">
+      <DependentUpon>CellPhoneModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CellPhoneModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CellPhoneModel.edmx</DependentUpon>
+      <LastGenOutput>CellPhoneModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Certs\localhost.cer" />
+    <Content Include="Certs\localhost.pfx" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\logo\fb_apple.gif" />
+    <Content Include="Images\logo\fb_blackberry.gif" />
+    <Content Include="Images\logo\fb_htc.gif" />
+    <Content Include="Images\logo\fb_lg.gif" />
+    <Content Include="Images\logo\fb_nokia.gif" />
+    <Content Include="Images\logo\fb_samsung.gif" />
+    <Content Include="Images\logo\fb_sony.gif" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\dien-thoai-di-dong-iphone-4s-dienmay.com-1.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\dien-thoai-di-dong-iphone-4s-dienmay.com-2.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\dien-thoai-di-dong-iphone-4s-dienmay.com-3.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\dien-thoai-di-dong-iphone-4s-dienmay.com-4.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\dien-thoai-di-dong-iphone-4s-dienmay.com-5.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 4S 16GB\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-1.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-2.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-3.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-4.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-5.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\apple-iphone-5-6.jpg" />
+    <Content Include="Images\Smartphone\Apple\iPhone 5 32GB\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\blacckberry-bold-9790-kich-thuoc.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\blacckberry-bold-9790_clip_image002-hsp-20121019-094614.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\blacckberry-bold-9790_clip_image003-hsp-20121019-100600.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\blacckberry-bold-9790_clip_image004-hsp-20121019-095136.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\blacckberry-bold-9790_clip_image007-hsp-20121019-095253.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-blackberry-9790-dienmay.com-1.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-BlackBerry-Bold-9790-dienmay.com-no1.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-BlackBerry-Bold-9790-dienmay.com-no2.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-BlackBerry-Bold-9790-dienmay.com-no3.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-BlackBerry-Bold-9790-dienmay.com-no4.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\dien-thoai-di-dong-Nokia-lumia-800-dienmay.com-b.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Bold 9790\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Curve 9220\blackberry-z10-1-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Curve 9220\BlackBerry-Z10-1-750x500-2.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Curve 9220\BlackBerry-Z10-1-750x500-3.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Curve 9220\blackberry-z10-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BlackBerry Curve 9220\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\blackberry-z10-1-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\BlackBerry-Z10-1-750x500-2.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\BlackBerry-Z10-1-750x500-3.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\blackberry-z10-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\blackberry-z10-1200x1200-3.jpg" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\BlackBerry-Z10-2-750x500-1.png" />
+    <Content Include="Images\Smartphone\BlackBerry\BLACKBERRY Z10\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual-E435-2-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual-E435-2-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual1E435-750x500-1.png" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual1E435-750x500-2.png" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual1E435-750x500-3.png" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L3 II Dual E435\LG-Optimus-L3-II-Dual1E435-750x500-5.png" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-750x500-4.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-750x500-5.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-hinh360-5.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L5 II Dual E455\LG-Optimus-L5-II-Dual-E455-kich-thuoc-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-1-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-1-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-1-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-1-750x500-4.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-hinh360-26.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-kich-thuoc-1.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\LG-Optimus-L7-II-Dual-P715-l.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\lg-optimus-l7ii-dual-e715-5.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L7 II Dual P715\lg-optimus-l7ii-dual-e715-6.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\Acer-Aspire-E1-571-33114G50MN-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\Acer-Aspire-E1-571-33114G50MN-1200x1200-3.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\Acer-Aspire-E1-571-33114G50MN-1200x1200-4.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\dien-thoai-di-dong-lg-optimus-l9-2.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\dien-thoai-di-dong-lg-optimus-l9-3.jpg" />
+    <Content Include="Images\Smartphone\LG\LG Optimus L9 P768\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1-750x500-2.png" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1-750x500-3.png" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1-750x500-7.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\nokia-lumia-520-1.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1200x1200-6.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1200x1200-7.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-2-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-2-750x500-1.png" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-10.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-11.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-12.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-2.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-3.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-5.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-6.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-7.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-8.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-9.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\hinhdaidien1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\samsung-galaxy-mega-63-i9200-1-750x500-1.png" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\samsung-galaxy-mega-63-i9200-1-750x500-2.png" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\Samsung-Galaxy-Mega-6_3-I9200-750x500-1.png" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\Samsung-Galaxy-Mega-6_3-I9200-750x500-2.png" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY MEGA 6.3 I9200\Samsung-Galaxy-Mega-6_3-I9200-750x500-3.png" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy S III mini i8190\dien-thoai-di-dong-samsung-galaxy-s3-mini-i8190-1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy S III mini i8190\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy S III mini i8190\Samsung-Galaxy-S-III-mini-i8190-White-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy S III mini i8190\Samsung-Galaxy-S3-mini-1200x1200-01.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\galaxy-s4-gallery-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\galaxy-s4-gallery-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\galaxy-s4-gallery-750x500-4.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\galaxy-s4-gallery-750x500-5.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\Samsung-Galaxy-S4-1-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\dien-thoai-di-dong-Samsung-Galaxy-Y-S5360-new-dienmay.com-1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\Samsung-Galaxy-Y-S5360-1-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\Samsung-Galaxy-Y-S5360-1-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\Samsung-Galaxy-Y-S5360-1-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\Samsung-Galaxy-Y-S5360-1-750x500-4.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-10.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-11.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-12.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-360-35.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-5.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-6.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-7.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-8.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\dien-thoai-di-dong-sony-xperia-u-dienmay.com-9.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Ericsson ST25i\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-1-750x500-1.png" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-1-750x500-2.png" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-1-750x500-3.png" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-1-750x500-4.png" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-2-750x500-5.png" />
+    <Content Include="Images\Smartphone\Sony\SONY XPERIA L C2105\Sony-Xperia-L-2-750x500-6.png" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\Sony-Xperia-neo-L-MT25i-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\Sony-Xperia-neo-L-MT25i-750x500-2.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\Sony-Xperia-neo-L-MT25i-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\Sony-Xperia-neo-L-MT25i-750x500-5.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\SonyXperianeoLMT25i-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\SonyXperianeoLMT25i-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\SonyXperianeoLMT25i-1200x1200-3.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\SonyXperianeoLMT25i-1200x1200-4.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia neo L MT25i\SonyXperianeoLMT25i-1200x1200-5.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Dien-thoai-Sony-Xperia-V-LT25i-hinh360-35.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-Acro-S-l.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-1200x1200-3.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-1200x1200-4.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-1200x1200-5.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\Sony-Xperia-V-LT25i-kich--thuoc.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia V LT25i\sony-xperia-v_clip_image002.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\Sony-Xperia-Z-750x500-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\Sony-Xperia-Z-bo-ban-hang-chuan-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\Sony-Xperia-Z-hinh360-31.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\Sony-Xperia-Z-kich-thuoc.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\Sony-Xperia-Z-mo-ta-chuc-nang-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image002.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image004.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image006.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image008.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image010.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image012.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image014.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image015.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image017.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image019.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image020.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image022.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image024.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image026.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image028.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image030.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image032.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image034.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image036.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image038.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image040.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image042.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xperia-z_clip_image044.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xpria-z-1-1200x1200-1.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xpria-z-1-1200x1200-2.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xpria-z-1-1200x1200-3.jpg" />
+    <Content Include="Images\Smartphone\Sony\Sony Xperia Z\sony-xpria-z-1-1200x1200-4.jpg" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\PriceCollecting\Index.cshtml" />
+    <Content Include="Views\NewsCollecting\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3843</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:43870/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

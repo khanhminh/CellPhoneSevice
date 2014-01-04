@@ -399,6 +399,8 @@
     </Content>
     <Content Include="Certs\localhost.cer" />
     <Content Include="Certs\localhost.pfx" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Thumbs.db" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Thumbs.db" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\logo\fb_apple.gif" />
     <Content Include="Images\logo\fb_blackberry.gif" />
@@ -486,6 +488,12 @@
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-1200x1200-7.jpg" />
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-2-750x500-1.jpg" />
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 520\Nokia-Lumia-520-2-750x500-1.png" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Nokia-Lumia-525-1.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Nokia-Lumia-525-2.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Nokia-Lumia-525-3.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Nokia-Lumia-525-4.jpg" />
+    <Content Include="Images\Smartphone\Nokia\Nokia Lumia 525\Nokia-Lumia-525-5.jpg" />
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-10.jpg" />
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-11.jpg" />
     <Content Include="Images\Smartphone\Nokia\Nokia Lumia 820\dien-thoai-di-dong-Nokia-Lumia-820-12.jpg" />
@@ -514,6 +522,14 @@
     <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\galaxy-s4-gallery-750x500-5.jpg" />
     <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\hinhdaidien.jpg" />
     <Content Include="Images\Smartphone\SamSung\SAMSUNG GALAXY S4 I9500\Samsung-Galaxy-S4-1-750x500-3.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\hinhdaidien.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-1.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-2.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-3.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-4.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-5.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-6.jpg" />
+    <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Trend Plus\Samsung-Galaxy-Trend-Plus-7.jpg" />
     <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\dien-thoai-di-dong-Samsung-Galaxy-Y-S5360-new-dienmay.com-1.jpg" />
     <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\hinhdaidien.jpg" />
     <Content Include="Images\Smartphone\SamSung\Samsung Galaxy Y S5360\Samsung-Galaxy-Y-S5360-1-750x500-1.jpg" />
